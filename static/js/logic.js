@@ -68,7 +68,7 @@ function createMap(earthquakes) {
     maxZoom: 18,
     zoomOffset: -1,
     style:    'mapbox/light-v11',
-  
+    access_token: api_key
   });
 
   // Create our map, giving it the grayscale map and earthquakes layers to display on load.
