@@ -3,10 +3,8 @@ var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_we
 
 // Perform a GET request to the query URL
 d3.json(queryUrl).then(function (data) {
-
   // Console log the data retrieved 
   console.log(data);
-
   // Once we get a response, send the data.features object to the createFeatures function.
   createFeatures(data.features);
 });
@@ -62,7 +60,7 @@ function createFeatures(earthquakeData) {
 function createMap(earthquakes) {
 
   // Create tile layer
-  var grayscale = L.tileLayer('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson', {
+  var grayscale = L.tileLayer('https://api.mapbox.com/styles/v1/{style}/tiles/{z}/{x}/{y}?access_token={access_token}', {
     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
     maxZoom: 18,
