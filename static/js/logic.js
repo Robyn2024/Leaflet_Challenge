@@ -72,7 +72,7 @@ function createMap(earthquakes) {
       37.09, -95.71
     ],
     zoom: 10,
-    layers: [grayscale, earthquakes]
+    layers: [earthquakes]
   });
 
   // Add legend
