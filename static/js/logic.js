@@ -6,7 +6,7 @@ d3.json(queryUrl).then(function (data) {
 
   // Console log the data retrieved 
   console.log(data);
-  
+
   // Once we get a response, send the data.features object to the createFeatures function.
   createFeatures(data.features);
 });
@@ -71,12 +71,13 @@ function createMap(earthquakes) {
     access_token: api_key
   });
 
+
   // Create our map, giving it the grayscale map and earthquakes layers to display on load.
   var myMap = L.map("map", {
     center: [
       37.09, -95.71
     ],
-    zoom: 10,
+    zoom: 30,
     layers: [grayscale, earthquakes]
   });
 
