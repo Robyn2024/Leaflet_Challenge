@@ -1,1 +1,1 @@
- api_key = "pk.eyJ1Ijoicm9ieW4yNCIsImEiOiJjbHI1ZGQ2bWoxeHBiMmpxaWk3eGI0OWtpIn0.6XrQoemmHG_baZTpwAMvgg";
+const api_key = "pk.eyJ1Ijoicm9ieW4yNCIsImEiOiJjbHI1ZGQ2bWoxeHBiMmpxaWk3eGI0OWtpIn0.6XrQoemmHG_baZTpwAMvgg";
