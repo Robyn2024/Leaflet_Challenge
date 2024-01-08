@@ -62,15 +62,9 @@ function createFeatures(earthquakeData) {
 function createMap(earthquakes) {
 
   // Create tile layer
-  var grayscale = L.tileLayer('https://api.mapbox.com/styles/v1/{style}/tiles/{z}/{x}/{y}?access_token={access_token}', {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-    tileSize: 512,
-    maxZoom: 18,
-    zoomOffset: -1,
-    style:    'mapbox/light-v11',
-    access_token: api_key
-  });
-
+  let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
 
   // Create our map, giving it the grayscale map and earthquakes layers to display on load.
   var myMap = L.map("map", {
